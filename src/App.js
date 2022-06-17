@@ -19,6 +19,7 @@ function App() {
         <Route path="/random" element={<RandomBeer />} />
         <Route path="/new-beer" element={<NewBeer />} />
         <Route path="/beers/:id" element={<SingleBeer />} />
+        {/* <Route path=""/beers/ /> */}
 
         
         {/* <Route path="/" element={<Header />} /> */}
@@ -34,3 +35,4 @@ export default App;
 // ask about:
 // 1: header: do it nice?
 // 2. why are the images not importing/working? look at listbeers bottom
+// 3. single page: contributed by is showing information double

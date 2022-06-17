@@ -41,7 +41,3 @@ function SingleBeer() {
 }
 
 export default SingleBeer
-
-
-
-// contributed_by

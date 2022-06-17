@@ -11,7 +11,7 @@ function RandomBeer() {
   const response = await fetch(`${api}/random`)
   const parsed = await response.json()
   setRandomBeer(parsed)
-  console.log(parsed)
+  
   }
 
   useEffect(() => {

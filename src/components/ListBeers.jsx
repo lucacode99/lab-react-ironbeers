@@ -4,6 +4,7 @@ import Header from './Header';
 import {useState, useEffect} from 'react'
 import {api} from '../utils/api'
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 
 
@@ -12,7 +13,7 @@ function ListBeers() {
   const fetchBeers = async setter => {
   const response = await fetch(`${api}`) 
   const parsed = await response.json()
-  //console.log(parsed)
+  console.log(parsed)
   setBeers(parsed)
 }
 
@@ -29,7 +30,9 @@ useEffect(() => {
     {beers.map(beer => (
       <div  key={beer._id}>
         <img src={beer.image_url} alt="ggg" style={{height: 150}}></img>
-      <h3>{beer.name}</h3>
+      <h3>
+        <Link to={`/beers/${beer._id}`}>{beer.name}</Link>
+      </h3>
       <span>{beer.tagline}</span>
       <p>Contributed by: {beer.contributed_by}</p> 
       
